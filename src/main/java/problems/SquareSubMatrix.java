@@ -1,10 +1,11 @@
 package problems;
 
-import java.util.Collections;
-import java.util.stream.Stream;
-
 public class SquareSubMatrix {
 
+  /**
+   * Given a 2D boolean array, find the largest square subarray of true values. You should return
+   * the side length of the largest square subarray.
+   */
   public static void main(String[] args) {
     boolean[][] matrix = new boolean[3][4];
 
@@ -88,7 +89,7 @@ public class SquareSubMatrix {
     return cache[row][col];
   }
 
-
+  // bottom-up solution that uses iteration
   private static int largestSquareSubMatrixIteratively(boolean[][] matrix) {
 
     int largestSide = Integer.MIN_VALUE;
